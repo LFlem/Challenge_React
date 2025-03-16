@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Layout, Typography, Button } from 'antd';
 import FormView from './components/FormView/FormView';
 import DrawerMenu from './components/DrawerMenu/DrawerMenu';
-import { formCategories, FormCategory } from './data/formCategories';
+import { formCategories } from './data/formCategories';
 
 const { Header, Content } = Layout;
 const { Title } = Typography;

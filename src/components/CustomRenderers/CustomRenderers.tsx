@@ -1,9 +1,9 @@
 import React from 'react';
 import { Input } from 'antd';
-import { ControlProps, RendererProps } from '@jsonforms/core';
+import { ControlProps } from '@jsonforms/core';
 
 const CustomInput: React.FC<ControlProps> = (props) => {
-    const { data, path, handleChange, schema, uischema } = props;
+    const { data, path, handleChange, schema } = props;
 
     return (
         <div style={{ marginBottom: 16 }}>

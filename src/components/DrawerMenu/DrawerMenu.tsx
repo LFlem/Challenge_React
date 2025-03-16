@@ -1,7 +1,7 @@
 import React from 'react';
 import { Drawer, Menu } from 'antd';
 import { MenuProps } from 'antd/lib/menu';
-import { FormCategory, formCategories } from '../../data/formCategories';
+import { formCategories } from '../../data/formCategories';
 
 interface DrawerMenuProps {
   visible: boolean;
