@@ -21,18 +21,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'pnpm'  # Utilisez 'npm' si vous utilisez npm
+          cache: 'npm'
 
       - name: Install dependencies
-        run: pnpm install  # Utilisez 'npm install' si vous utilisez npm
+        run: npm install
 
       - name: Build project
-        run: pnpm run build  # Utilisez 'npm run build' si vous utilisez npm
+        run: npm run build
 
       - name: Upload build artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './build'  # Dossier contenant les fichiers générés
+          path: './build'
 
   deploy:
     needs: build
