@@ -52,3 +52,5 @@ Hanim MOUSSA YARI - GitHub
 
 ## Licence
 Ce projet est sous licence MIT.
+
+![GitHub Actions](https://github.com/LFlem/Challenge_React/actions/workflows/deploy.yml/badge.svg)
