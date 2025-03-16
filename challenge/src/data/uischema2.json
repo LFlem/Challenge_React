@@ -1,0 +1,25 @@
+{
+    "type": "VerticalLayout",
+    "elements": [
+        {
+            "type": "Control",
+            "scope": "#/properties/address",
+            "label": "Adresse"
+        },
+        {
+            "type": "HorizontalLayout",
+            "elements": [
+                {
+                    "type": "Control",
+                    "scope": "#/properties/city",
+                    "label": "Ville"
+                },
+                {
+                    "type": "Control",
+                    "scope": "#/properties/postalCode",
+                    "label": "Code Postal"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "type": "VerticalLayout",
+    "elements": [
+        {
+            "type": "Control",
+            "scope": "#/properties/phone",
+            "label": "Téléphone"
+        },
+        {
+            "type": "Control",
+            "scope": "#/properties/company",
+            "label": "Entreprise"
+        }
+    ]
+}
