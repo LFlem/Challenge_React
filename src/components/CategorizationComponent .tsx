@@ -5,7 +5,7 @@ import { RendererProps } from '@jsonforms/core';
 const { TabPane } = Tabs;
 
 interface CategorizationComponentProps extends RendererProps {
-  uischema: any; // Le UI Schema pour la catégorisation
+  uischema: any;
 }
 
 const CategorizationComponent: React.FC<CategorizationComponentProps> = (props) => {
