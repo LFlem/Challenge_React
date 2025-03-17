@@ -1,8 +1,9 @@
 import React from 'react';
 import { JsonForms } from '@jsonforms/react';
 import { materialRenderers, materialCells } from '@jsonforms/material-renderers';
-import { JsonSchema, RankedTester, rankWith, UISchemaElement } from '@jsonforms/core';
-import CustomInput from './../CustomRenderers/CustomRenderers';
+import { JsonSchema, UISchemaElement } from '@jsonforms/core';
+// import CustomInput from './../CustomRenderers/CustomRenderers';
+import CategorizationComponent from '../CategorizationComponent ';
 
 interface FormViewProps {
   schema: JsonSchema;
@@ -11,21 +12,30 @@ interface FormViewProps {
   onChange: (data: any) => void;
 }
 
-const customInputTester: RankedTester = rankWith(
-    1,
-    (uischema: UISchemaElement, schema: JsonSchema) => {
-      return schema?.type === 'string' ? true : false;
-    }
-  );
+// const customInputTester: RankedTester = rankWith(
+//     1,
+//     (uischema: UISchemaElement, schema: JsonSchema) => {
+//       return schema?.type === 'string' ? true : false;
+//     }
+//   );
 
-// Ajouter le composant personnalisé aux renderers
+// const renderers = [
+//     ...materialRenderers,
+//     {
+//       tester: customInputTester,
+//       renderer: CustomInput,
+//     },
+//   ];
+
 const renderers = [
-    ...materialRenderers,
-    {
-      tester: customInputTester,
-      renderer: CustomInput,
+  ...materialRenderers,
+  {
+    tester: (uischema: UISchemaElement, schema: JsonSchema) => {
+      return uischema.type === 'Categorization' ? 10 : -1;
     },
-  ];
+    renderer: CategorizationComponent,
+  },
+];
 
 const FormView: React.FC<FormViewProps> = ({ schema, uischema, data, onChange }) => {
   return (

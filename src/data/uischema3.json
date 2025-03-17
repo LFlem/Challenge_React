@@ -1,15 +1,21 @@
 {
-    "type": "VerticalLayout",
+    "type": "Categorization",
     "elements": [
-        {
+      {
+        "type": "Category",
+        "label": "Informations de Contact",
+        "elements": [
+          {
             "type": "Control",
             "scope": "#/properties/phone",
             "label": "Téléphone"
-        },
-        {
+          },
+          {
             "type": "Control",
             "scope": "#/properties/company",
             "label": "Entreprise"
-        }
+          }
+        ]
+      }
     ]
-}
+  }
